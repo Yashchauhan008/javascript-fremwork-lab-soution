@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function test(x){
+            console.log(x,"from simple function")
+        }
+        
+        const arrowTest=()=>console.log("arrow function")
+        
+        const arrowTestWithPerameter = (x) => {
+            console.log(x,"from arrow function")
+        }
+        
+        test("test")
+        arrowTest()
+        arrowTestWithPerameter("test")
+    </script>
+</body>
+</html>

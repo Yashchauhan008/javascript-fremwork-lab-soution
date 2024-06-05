@@ -1,0 +1,32 @@
+<!-- 1.WAP to demonstrate the use of various inbuilt string functions like charAt(), charCodeAt(), startsWith(), endsWith(), includes(), indexOf(), lastIndexOf(), match(), repeat(), replace("", ""), search(), split(), substr(start, length), substring(start, end), toString(), trim(). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var name = "yash this side";
+        console.log(name);
+        console.log(name.charAt(2));
+        console.log(name.charCodeAt(1));
+        console.log(name.startsWith('yash'));
+        console.log(name.endsWith('side'));
+        console.log(name.includes('this'));
+        console.log(name.indexOf('s'));
+        console.log(name.lastIndexOf('s'));
+        console.log(name.match('yash this side')); // need help
+        console.log(name.repeat(2));
+        console.log(name.replace("yash","ansh"));
+        console.log(name.search("side"));
+        console.log(name.split(" "));
+        console.log(name.substr(5,4));
+        console.log(name.substring(3,8));
+        console.log(name.toString());
+        console.log(name.trim());
+    </script>
+</body>
+</html>

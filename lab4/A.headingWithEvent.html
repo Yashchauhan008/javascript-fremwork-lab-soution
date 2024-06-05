@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Hover Effect on Heading</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            color: black; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="heading">Hover over me!</h1>
+
+    <script>
+        const heading = document.getElementById('heading');
+
+        heading.addEventListener('mouseover', function() {
+            this.style.color = 'red';
+        });
+
+        heading.addEventListener('mouseout', function() {
+            this.style.color = 'black';
+        });
+    </script>
+</body>
+</html>

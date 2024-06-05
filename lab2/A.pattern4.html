@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverted Pyramid Pattern Generator</title>
+</head>
+<body>
+    <pre id="pattern"></pre>
+
+    <script>
+        function generateInvertedPyramid(rows) {
+            let pattern = '';
+            for (let i = rows; i >= 1; i--) {
+                for (let j = 1; j <= i; j++) {
+                    pattern += '*';
+                }
+                pattern += '\n';
+            }
+            return pattern;
+        }
+
+        const rows = 5;
+        const pattern = generateInvertedPyramid(rows);
+        console.log(pattern)
+
+        document.getElementById('pattern').innerText = pattern;
+    </script>
+</body>
+</html>

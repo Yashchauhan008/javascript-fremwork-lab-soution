@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country List</title>
+</head>
+<body>
+    <input id="country" type="text" placeholder="Enter country"/>
+    <button onclick="addCountry()">Add Country</button>
+    <p id="output"></p>
+
+    <script>
+        var countries = [];
+
+        function addCountry() {
+            var countryName = document.getElementById('country').value;
+            if (countryName) {
+                countries.push(countryName);
+                document.getElementById('country').value = '';
+                // document.getElementById('output').innerText = `Countries: ${countries.join(", ")}`;
+                console.log(countries)
+            } else {
+                alert("Please enter a country name");
+            }
+        }
+    </script>
+</body>
+</html>

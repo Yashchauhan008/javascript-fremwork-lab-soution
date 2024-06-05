@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = "var a"
+        let b = "let b"
+
+        {
+            console.log(a,"inner block")
+            console.log(b,"inner block")
+            var c = "var c"
+            let d = "let d"
+        }
+        
+        console.log(a)
+        console.log(b)
+
+        //d will raise err
+        console.log(c)
+        // console.log(d)
+        
+        {
+            console.log(a ,"from outer block")
+            console.log(b ,"from outer block")
+            console.log(c ,"from outer block")
+            console.log(d ,"from outer block")
+        }
+
+    </script>
+</body>
+</html>

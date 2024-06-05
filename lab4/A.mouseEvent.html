@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event Recognizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        #eventDisplay {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mouse Event Recognizer</h1>
+    <div id="eventDisplay">Move your mouse or click anywhere!</div>
+
+    <script>
+        const eventDisplay = document.getElementById('eventDisplay');
+
+        function displayEvent(event) {
+            console.log(event)
+            eventDisplay.textContent = `Event: ${event.type}`;
+        }
+
+        document.addEventListener('click', displayEvent);
+        document.addEventListener('dblclick', displayEvent);
+        document.addEventListener('mousedown', displayEvent);
+        document.addEventListener('mouseup', displayEvent);
+        document.addEventListener('mouseover', displayEvent);
+        document.addEventListener('mouseout', displayEvent);
+        document.addEventListener('mousemove', displayEvent);
+        document.addEventListener('contextmenu', displayEvent);
+    </script>
+</body>
+</html>

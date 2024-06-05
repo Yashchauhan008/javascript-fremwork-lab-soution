@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Student {
+        constructor(name, place) {
+          this.name = name;
+          this.place = place;
+        }
+
+        printDetails() {
+          return `Hello, my name is ${this.name} and I am from ${this.place}.`;
+        }
+
+        changeName(name) {
+            this.name=name
+        }
+      }
+      
+      var s1 = new Student("yash", "rajkot");
+      console.log(s1.printDetails())
+      s1.changeName("smit")
+      console.log(s1.printDetails())
+    </script>
+  </body>
+</html>

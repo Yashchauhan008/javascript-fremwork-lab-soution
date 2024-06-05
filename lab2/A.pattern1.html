@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern Generator</title>
+</head>
+<body>
+    <pre id="pattern"></pre>
+
+    <script>
+        function generatePattern(rows, columns) {
+            let pattern = '';
+            for (let i = 0; i < rows; i++) {
+                for (let j = 0; j < columns; j++) {
+                    pattern += '*';
+                }
+                pattern += '\n'
+            }
+            return pattern;
+        }
+
+        const rows = 5;
+        const columns = 5;
+        const pattern = generatePattern(rows, columns);
+        console.log(pattern)
+        
+        document.getElementById('pattern').innerText = pattern;
+    </script>
+</body>
+</html>

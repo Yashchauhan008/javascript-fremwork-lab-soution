@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Keyboard Event Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .current-event {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Current Keyboard Event Display</h1>
+    <p>Press any key to see the current keyboard event details.</p>
+    <div class="current-event" id="currentEventDisplay">
+        Event details will appear here.
+    </div>
+
+    <script>
+        document.addEventListener('keydown', displayCurrentEvent);
+        document.addEventListener('keypress', displayCurrentEvent);
+        document.addEventListener('keyup', displayCurrentEvent);
+
+        function displayCurrentEvent(event) {
+            const eventDisplay = document.getElementById('currentEventDisplay');
+            
+            eventDisplay.textContent = `Event Type: ${event.type}     :::::::    Key: ${event.key}`;
+        }
+    </script>
+</body>
+</html>

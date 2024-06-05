@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback Demo</title>
+  </head>
+  <body>
+    <script>
+
+      function add(a, b, d, nextFun) {
+        ans = a + b;
+        nextFun(ans, d);
+        console.log(ans);
+        return ans;
+      }
+
+      function mul(a, b) {
+        ans = a * b;
+        console.log(ans);
+        return ans;
+      }
+
+      p1 = 10;
+      p2 = 20;
+      p3 = 30;
+
+      //(P1 + P2) * P3
+      ans = add(p1, p2, p3, mul);
+      alert(ans);
+    </script>
+  </body>
+</html>
