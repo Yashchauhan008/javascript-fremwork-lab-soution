@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Least Common Multiple (LCM)</title>
+</head>
+<body>
+    <script>
+        const num1 = parseInt(prompt("Enter the first number:"));
+        const num2 = parseInt(prompt("Enter the second number:"));
+
+        function gcd(a, b) {
+            if (b === 0) {
+                return a;
+            } else {
+                return gcd(b, a % b);
+            }
+        }
+
+        const lcm = (num1 * num2) / gcd(num1, num2);
+
+        document.write("The Least Common Multiple (LCM) of " + num1 + " and " + num2 + " is: " + lcm);
+    </script>
+</body>
+</html>

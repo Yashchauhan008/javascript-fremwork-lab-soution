@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let students = [];
+
+        // CREATE
+        function createStudent(name, age) {
+        students.push({ name, age });
+        }
+
+        // READ
+        function readStudents() {
+        console.log(students);
+        }
+
+        // UPDATE
+        function updateStudent(name, newAge) {
+        for (let i = 0; i < students.length; i++) {
+            if (students[i].name == name) {
+            students[i].age = newAge;
+            return;
+            }
+        }
+        }
+
+        // DELETE
+        function deleteStudent(name) {
+        students = students.filter(student => student.name != name);
+        }
+
+
+        createStudent("Krunal", 20);
+        createStudent("Samir", 19);
+        createStudent("Darshan", 22);
+
+        readStudents();
+
+        updateStudent("Samir", 23);
+        readStudents();
+
+        deleteStudent("Darshan");
+        readStudents();
+    </script>
+</body>
+</html>

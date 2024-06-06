@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Birthday Calculator</h1>
+
+Enter your birthday (mm/dd): <input id="birthday" type="text">
+<button onclick="calculateDays()">Calculate</button>
+
+<p id="result"></p>
+
+<script>
+  function calculateDays() {
+    var birthday = document.getElementById("birthday").value;
+    var today = new Date();
+    var birthdayThisYear = new Date(today.getFullYear(), birthday.split("/")[0]-1, birthday.split("/")[1]);
+
+    if (birthdayThisYear < today) {
+      birthdayThisYear.setFullYear(today.getFullYear() + 1);
+    }
+
+    var timeDiff = birthdayThisYear.getTime() - today.getTime();
+    var daysLeft = Math.floor(timeDiff / (1000 * 3600 * 24));
+
+    document.getElementById("result").innerHTML = `${daysLeft} days left`;
+  }
+</script>
+
+</body>
+</html>

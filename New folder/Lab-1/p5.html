@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Array</title>
+</head>
+<body>
+    <script>
+        const term = Number.parseInt(prompt("Enter the number of array elements"), 10);
+        
+        let arr = [];
+
+        for (let i = 0; i < term; i++) {
+            arr[i] = Number.parseInt(prompt("Enter element " + (i + 1)), 10);
+        }
+
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    let temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        document.write("The sorted array in ascending order is: " + arr.join(', '));
+    </script>
+</body>
+</html>

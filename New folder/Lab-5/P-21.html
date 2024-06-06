@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function demo(name, callback) {
+            console.log(`Hello, ${name}!`);
+            callback();
+        }
+        function demo1() {
+            console.log("Have a Good Day!");
+        }
+        demo("Krunal", demo1);
+    </script>
+</body>
+
+</html>

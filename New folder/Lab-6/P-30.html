@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let isPalindrome= num => {
+            let temp = num , newNum = 0,rem;
+        while (num>0){
+            rem = num%10;
+            num = Number.parseInt(num/10);
+            newNum = (newNum*10)+rem;
+        }
+        if (newNum==temp){
+            console.log("number is Palindrome");
+            document.write("number is Palindrome");
+        }else{
+            console.log("number is not Palindrome");
+            document.write("number is not Palindrome");
+        }
+        }
+        console.log(isPalindrome(121));
+        console.log(isPalindrome(123));
+    </script>
+</body>
+</html>
