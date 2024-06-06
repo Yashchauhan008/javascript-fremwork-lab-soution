@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // Initialize an array
+    var arr = [1, 2, 3, 4, 5];
+
+    
+    arr.push(6);
+    document.write(arr + "</br>"); // Outputs: [1, 2, 3, 4, 5, 6]
+
+    arr.pop();
+    document.write(arr + "</br>"); // Outputs: [1, 2, 3, 4, 5]
+
+    arr.shift();
+    document.write(arr + "</br>"); // Outputs: [2, 3, 4, 5]
+
+    arr.unshift(1);
+    document.write(arr + "</br>"); // Outputs: [1, 2, 3, 4, 5]
+
+    arr.sort();
+    document.write(arr + "</br>"); // Outputs: [1, 2, 3, 4, 5]
+
+    arr.reverse();
+    document.write(arr + "</br>"); // Outputs: [5, 4, 3, 2, 1]
+
+    var str = arr.join("-");
+    document.write(str + "</br>"); // Outputs: "5-4-3-2-1"
+
+    var newArr = str.split("-");
+    document.write(newArr + "</br>"); // Outputs: ["5", "4", "3", "2", "1"]
+
+    var includes3 = arr.includes("3");
+    document.write(includes3 + "</br>"); // Outputs: true
+
+    // Use find to find the first element that satisfies a condition
+    var firstEven = arr.find(x => x % 2 === 0);
+    document.write(firstEven + "</br>"); // Outputs: "4"
+</script>
+
+<body>
+
+</body>
+
+</html>

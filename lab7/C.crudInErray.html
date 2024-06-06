@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array Operations</h1>
+    <div id="arrayDisplay"></div>
+
+    <h3>Insert Element</h3>
+    <input type="number" id="insertElement" placeholder="Element">
+    <button onclick="insertElement()">Insert</button>
+
+    <h3>Update Element</h3>
+    <input type="number" id="updateIndex" placeholder="Index">
+    <input type="number" id="updateElement" placeholder="Element">
+    <button onclick="updateElement()">Update</button>
+
+    <h3>Delete Element</h3>
+    <input type="number" id="deleteIndex" placeholder="Index">
+    <button onclick="deleteElement()">Delete</button>
+
+    <script>
+        let array = [1, 2, 3, 4, 5];
+
+        function displayArray() {
+            const arrayDisplay = document.getElementById("arrayDisplay");
+            arrayDisplay.innerText = `Array: ${JSON.stringify(array)}`;
+        }
+
+        function insertElement() {
+            const element = parseInt(document.getElementById("insertElement").value);
+            array.push(element);
+            displayArray();
+        }
+
+        function updateElement() {
+            const index = parseInt(document.getElementById("updateIndex").value);
+            const element = parseInt(document.getElementById("updateElement").value);
+            if (index >= 0 && index < array.length) {
+                array[index] = element;
+                displayArray();
+            } else {
+                alert("Index out of bounds for update operation");
+            }
+        }
+
+        function deleteElement() {
+            const index = parseInt(document.getElementById("deleteIndex").value);
+            if (index >= 0 && index < array.length) {
+                array.splice(index, 1);
+                displayArray();
+            } else {
+                alert("Index out of bounds for delete operation");
+            }
+        }
+
+        displayArray();
+    </script>
+</body>
+</html>
